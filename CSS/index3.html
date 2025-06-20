@@ -1,92 +1,92 @@
 <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        @media screen and (min-width: 300px) {
-            h1{
-                font-size: 20px;
-            }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    @media screen and (min-width: 300px) {
+        h1{
+            font-size: 20px;
         }
-        @media  and (min-width: 600px) {
-            h1{
-                font-size:50px;
-                
-            }
+    }
+    @media  and (min-width: 600px) {
+        h1{
+            font-size:50px;
+            
         }
-        @media  and (min-width: 1000px) {
-            h1{
-                font-size:50px;
-                
-            }
+    }
+    @media  and (min-width: 1000px) {
+        h1{
+            font-size:50px;
+            
         }
-    </style>
+    }
+</style>
 </head>
 <body>
-    <h1>Responsive Design</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, dolorem?
-    </p>
+<h1>Responsive Design</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, dolorem?
+</p>
 </body>
 </html> -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Responsive Design</title>
-  <style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Responsive Design</title>
+<style>
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: sans-serif;
+} */
+
+h1 {
+    font-size: 16px;
+    
+}
+
+/* Small screens: 300px and above */
+@media screen and (min-width: 300px) {
     body {
-      margin: 0;
-      padding: 20px;
-      font-family: sans-serif;
+    background-color: lightblue;
     }
 
     h1 {
-      font-size: 16px;
-      
+    font-size: 20px;
+    }
+}
+
+/* Medium screens: 600px and above */
+@media screen and (min-width: 600px) {
+    body {
+    background-color: lightgreen;
     }
 
-    /* Small screens: 300px and above */
-    @media screen and (min-width: 300px) {
-      body {
-        background-color: lightblue;
-      }
+    h1 {
+    font-size: 40px;
+    }
+}
 
-      h1 {
-        font-size: 20px;
-      }
+/* Large screens: 1000px and above */
+@media screen and (min-width: 1000px) {
+    body {
+    background-color: lightcoral;
     }
 
-    /* Medium screens: 600px and above */
-    @media screen and (min-width: 600px) {
-      body {
-        background-color: lightgreen;
-      }
-
-      h1 {
-        font-size: 40px;
-      }
+    h1 {
+    font-size: 60px;
     }
-
-    /* Large screens: 1000px and above */
-    @media screen and (min-width: 1000px) {
-      body {
-        background-color: lightcoral;
-      }
-
-      h1 {
-        font-size: 60px;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 <body>
-  <h1>Responsive Design</h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, dolorem?
-  </p>
+<h1>Responsive Design</h1>
+<p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, dolorem?
+</p>
 </body>
 </html>

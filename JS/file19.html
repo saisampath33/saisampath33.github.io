@@ -1,0 +1,58 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let users = [];
+        const addUser = () => {
+            // Get input values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            // Create user object
+            const user = { name, email };
+            // Add to users array
+            users.push(user);
+            console.log(users);
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+        };
+    </script>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <p><input type="text" id="name" placeholder="Enter Name"></p>
+    <p><input type="text" id="email" placeholder="Enter email"></p>
+    <button onclick="addUser()">Submit</button>
+</body> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let user = {};
+      let users = [];
+      const addUser = () => {
+        users.push({...user});
+        console.log(users);
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <p>
+      <input
+        type="text"
+        placeholder="Enter Name"
+        onchange="user.name=event.target.value"
+      />
+    </p>
+    <p><input type="text" placeholder="Enter Email"  onchange="user.email=event.target.value" /></p>
+    <p><input type="password" placeholder="New Password"  onchange="user.pass=event.target.value"/></p>
+    <button onclick="addUser()">Submit</button>
+  </body>
+</html>

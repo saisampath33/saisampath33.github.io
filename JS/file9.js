@@ -33,8 +33,8 @@ const points = [2, 5, 3, 2, 1, 8];
 //map is used to create a new array with the same or modified value 
 // Use forEach for side effects, use map when you want a new array with transformed values.
 
-const newarr = points.filter((value)=>value>2);
-console.log(newarr);  //returns the value greater than 2 in a array
+// const newarr = points.filter((value)=>value>2);
+// console.log(newarr);  //returns the value greater than 2 in a array
 
 const result = points.find((value)=>value>2);
 console.log(result); //it finds the first element in array which is greather than 2 and only prints one element 
@@ -44,5 +44,5 @@ const res = points.reduce((sum,value)=>{
 },0); //the sum default value is 0
 console.log("sum:",res);
 
-const newarr1 = points.map((value)=>value>2);
-console.log(newarr1);
+// const newarr1 = points.map((value)=>value>2);
+// console.log(newarr1);

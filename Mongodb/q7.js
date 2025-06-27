@@ -100,8 +100,58 @@ db.students.updateMany(
 db.students.updateMany(
     {},
     { $inc:{age:1}}
-)
+);
 
 db.students.updateMany(
     {},{$pull:{courses:"Physics"}}
 )
+//joins
+db.address.insertMany([
+    {
+        studentId: ObjectId('685cdd98d9897cb291748a61'),
+        city:"Vizag",
+        country:"India"
+    },{
+        studentId: ObjectId('685cdd98d9897cb291748a62'),
+        city:"Vijayawada",
+        country:"India"
+    },{
+        studentId: ObjectId('685cdd98d9897cb291748a63'),
+        city:"Kerala",
+        country:"India"
+    }
+])
+
+db.students.aggregate([
+    {$lookup:{
+        from:"address",
+        localField:"_id" ,
+        foreignField:"studentId",
+        as:"address",
+    },
+},{
+        $unwind:"$address"
+    },
+    {$project: {
+        _id:0,
+        name:1,
+        age:1,
+        "address.city":1,
+        "address.country":1
+    }}
+])
+//local field od students which is common in addres collcetion
+//is _id and foriegn field is studentId in address collection
+//as is the name of the field in the output
+// $unwind is used to deconstruct the address array field from the input documents to output a document for each element in the array.
+// $project is used to specify which fields to include in the output documents, excluding the _id field and including name, age, city, and country from the address field.
+
+db.employees.aggregate([
+    {$project: {name:1,location:1}},{$unwind: "$location"}
+])
+
+db.students.aggregate([
+    { $unwind: "$location" },
+    { $project: { name: 1, location: 1 } }
+])
+

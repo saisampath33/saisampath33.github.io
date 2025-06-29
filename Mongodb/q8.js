@@ -55,3 +55,16 @@ db.posts.aggregate([
         comment:"$comments.comment"
     }}
 ])
+//project only post and comment with condition
+db.posts.aggregate([
+    {$group:{
+        _id:"$post",
+        comments:{$push:"$comments"}}},
+    {$lookup:{
+        from:"comments",
+        localField:"_id",
+        foreignField:"pid",
+        as:"comments"
+    }},
+])
+db.marks

@@ -1,8 +1,8 @@
 //function arguments and return values
-function greet(student){
-    console.log(`Hello, ${student}!`);
-}
-greet("Sampath"); //calling the function with an argument
+// function greet(student){
+//     console.log(`Hello, ${student}!`);
+// }
+// greet("Sampath"); //calling the function with an argument
 
 // function add(a, b){
 //     return a + b; 

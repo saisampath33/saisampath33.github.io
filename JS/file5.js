@@ -9,7 +9,7 @@
 })(); //immediately invoked function expression (IIFE)
 
 //hoisting
-greet(); //calling the function before its declaration
-function greet(){
-    console.log("Hello, Student!");
-}
+// greet(); //calling the function before its declaration
+// function greet(){
+//     console.log("Hello, Student!");
+// }
